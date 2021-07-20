@@ -7,7 +7,7 @@ Integrantes:
 
 2. Joan Bellizzi VSF452 
 
-3.Luis Chung VSF452 
+3. Luis Chung VSF452 
 
 4. Mariam Edwards VSF451 
 
