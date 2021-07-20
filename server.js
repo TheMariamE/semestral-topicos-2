@@ -1,11 +1,19 @@
+#!/usr/bin/env node
+'use strict';
+
 require('dotenv').config({ silent: true });
 
-const app = require('./app');
+const server = require('./app');
+const port = process.env.PORT || 3000;
 
-const port = process.env.PORT || 5000;
-const server = app.listen(port, () => {
-  // eslint-disable-next-line no-console
+const startServer = server.listen(port, function() {
   console.log('Server running on port: %d', port);
 });
 
-module.exports = server;
+function close() {
+  startServer.close();
+}
+
+module.exports = {
+  close,
+};

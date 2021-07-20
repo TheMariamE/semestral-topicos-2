@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 /*eslint no-native-reassign: "off"*/
-//'use strict';
+'use strict';
 
 $(document).ready(function () {
   var modelList = [];

@@ -1,4 +1,5 @@
-Semestral de la asignatura Topicos Especiales II
+# proyfinaltopicos-watson-tts-y-translator
+Proyecto Final de Tópicos Especiales II - Servicios de Traductor de idiomas y Text-to-Speech de IBM Watson
 
 Integrantes: 
 
