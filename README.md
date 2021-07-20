@@ -1,59 +1,15 @@
-# watson-example-text-speech
-Ejemplo basico de como usar texto a voz con IBM Watson con node js
+Semestral de la asignatura Topicos Especiales II
 
-## Pre requisitos
+Integrantes: 
 
-Instalar NodeJS y utitlizar algun editor
+1. Sureya Aguilar VSF452 
 
-- [Node.js](https://nodejs.org/) v14+ como motor.
-- Un editor como [VsCode](https://code.visualstudio.com/)
-- Cuenta de IBM Cloud
+2. Joan Bellizzi VSF452 
 
-## Paso 0
+3.Luis Chung VSF452 
 
-Luego de que tengas instalado NodeJs y un editor de tu preferencia abre este proyecto y a continuaciom
+4. Mariam Edwards VSF451 
 
-- Copia el archivo .env.ejemplo a .env .
-- Primero instala todas las dependencias.
+5. Luis Torres VSF451
 
-```bash
-# instalar dependencias
-$ npm install
-```
-
-- una vez intalada toda las dependencias ejecuta el proyecto con:
-
-```bash
-# server con refresh automatico en localhost:3000
-$ npm run local
-```
-
-- abre el explorador en http://localhost:3000
-
-## Paso 1
-
-Ahora vamos a crear las credenciales con las cuales podremos usar los servicios de IBM Watson existen muchas formas de autenticarse aqui puedes encontrar mas [info](https://github.com/watson-developer-cloud/node-sdk#authentication).
-
-- Vamos a la pagina de IBM Cloud [Dashboard](https://cloud.ibm.com/).
-- Luego crearemos un nuevo recurso en [**Crear Recurso > AI**](https://cloud.ibm.com/catalog?category=ai) y crea la instancia del servicio [Ejemplo](archivos_tutorial/Paso1_1_Ibm_cloud_resource.PNG).
-- Una vez creado la instancia damos clik en **Administracion** y vemos la url y el API key. [Ejemplo](archivos_tutorial/Paso1_2_manage_api.PNG)
-- Copiamos estos valores y los reemplazamos en nuestro archivo .env
-- Una vez reemplazado los valores ejecuta.
-
-```bash
-# ejecutara y creara un archivo en el directorio base.
-$ npm run prueba
-```
-
-- Una vez terminada la ejecucion buscamos en el directorio base un archivo llamado `hola_mundo.mp3` y reproducelo.
-- Prueba explorando el archivo `prueba.js`.
-- Cambia el texto y ejecutar nuevamente el comando `npm run prueba` y luego reproduce el archivo `hola_mundo.mp3`.
-
-## Paso 2
-
-ejecutar
-
-```bash
-# server con refresh automatico en localhost:3000
-$ npm run local
-```
+El proyecto se basa en una pagina que contiene la aplicacion de las API de Text to Speech y Language Translator de IBM 
