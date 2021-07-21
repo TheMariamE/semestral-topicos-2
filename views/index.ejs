@@ -48,33 +48,6 @@
   </div>
   <!-- .navbar-wrapper -->
   <!-- Service Description Bar -->
-  <div class="header">
-    <div class="container">
-      <div class="col-lg-2 col-md-2 hidden-sm hidden-xs">
-        <img src="images/language-translator.svg" class="service-icon">
-      </div>
-      <div class="col-lg-10 col-md-10 col-sm-12">
-        <h1>Language Translator</h1>
-        <p>The IBM Watson Language Translator service allows you to input text or documents in one language and see the output in another. 
-         Translation is available for over 70 languages: Afrikaans, Albanian, Arabic, Armenian, Azerbaijani, Bashkir, Basque, Belarusian, Bengali, Bosnian, Bulgarian, Catalan, Central Khmer, Chinese (Simplified), Chinese (Traditional), Chuvash, Croatian, Czech, Danish, Dutch, English, Esperanto, Estonian, Finnish, French, Georgian, German, Greek, Gujarati, Haitian, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Irish, Italian, Japanese, Kazakh, Kirghiz, Korean, Kurdish, Latvian, Lithuanian, Malay, Malayalam, Maltese, Mongolian, Norwegian Bokmal, Norwegian Nynorsk, Panjabi, Persian, Polish, Portuguese, Pushto, Romanian, Russian, Serbian, Slovakian, Slovenian, Somali, Spanish, Swedish, Tamil, Telugu Thai, Turkish, Ukrainian, Urdu, and Vietnamese.
-        </p>
-        <p><img src="images/link.svg" class="glyph"><strong>Resources:</strong></br>
-          <div class="resources">
-            <a href="https://cloud.ibm.com/apidocs/language-translator">API Overview</a>
-            <a
-              href="https://cloud.ibm.com/docs/language-translator?topic=language-translator-gettingstarted">Documentation</a>
-            <a href="https://github.com/watson-developer-cloud/language-translator-nodejs">Fork on Github</a>
-            <a class="base--button base--button_fill"
-              href="https:/cloud.ibm.com/registration/?target=%2Fcatalog%2Fservices%2Flanguage-translator%3FhideTours%3Dtrue%26cm_mmc%3D-_-Watson%2BCore_Watson%2BCore%2B-%2BPlatform-_-WW_WW-_-wdc-ref%26cm_mmc%3D-_-Watson%2BCore_Watson%2BCore%2B-%2BPlatform-_-WW_WW-_-wdc-ref%26cm_mmca1%3D000000OF%26cm_mmca2%3D10000409">Start
-              for free in IBM Cloud</a>
-          </div>
-          <!-- .resources -->
-        </p>
-      </div>
-      <!-- .col-lg-10 -->
-    </div>
-    <!-- .container -->
-  </div>
   <% } %>
   <!-- .header -->
   <!-- Step 2 Section-->
@@ -95,40 +68,17 @@
         </div>
         <!-- .form-group -->
       </div>
-      <!-- .col-lg-8 -->
-      <div class="col-lg-12 col-md-12 col-sm-12">
-        <div>
-          <h6><strong>Would you like to help make this service better?</strong><br><br>
-            <div class="form-group opt-box-input">
-              <input type="radio" name="serRadio" id="serRadio" value="0" style="margin-left: 0;" checked>Allow Watson
-              to learn from this session<br><input type="radio" id="serRadio" name="serRadio" value="1"
-                style="margin-left: 0;">Opt out
-            </div>
-            <div>This system is for demonstration purposes only and is not intended to process Personal Data. No
-              Personal Data is to be entered into this system as it may not have the necessary controls in place to meet
-              the requirements of the General Data Protection Regulation (EU) 2016/679</div>
-          </h6>
-          <div>
-            <h6>
-              By using this application, you agree to the&nbsp;
-              <a target="_blank" rel="noreferrer noopener"
-                href="https://watson-developer-cloud.github.io/terms?name=Language%20Translator%20Demo">
-                Terms of Use
-              </a>
-            </h6>
-          </div>
-        </div>
-      </div>
     </div>
-    <hr>
-    <!-- Two columns of inputs -->
-    <!-- First column of inputs -->
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
         <h2>Translate Text</h2>
       </div>
+    </div>
+    <!-- Three columns of inputs -->
+    <!-- First column of inputs -->
       <!-- .col-lg-12 -->
-      <div class="col-lg-6 col-md-6 col-sm-6">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4">
         <h3>Input</h3>
         <p class="help-block">Enter or paste text from a passage.</p>
         <div class="form-group row">
@@ -153,8 +103,8 @@
               <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
                     data-toggle="tab">Text</a></li>
-                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Rest
-                    API</a></li>
+                <!--<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Rest
+                    API</a></li>-->
                 <button style="margin: 0em; padding: 0em;" class="btn btn-secondary pull-right" type="button" id="sourceTargetLangSwitch">⇄</button>
               </ul>
               <div class="hr-tab"></div>
@@ -194,64 +144,9 @@
         </div>
         <!-- /.well -->
       </div>
-      <!-- /.tabpanel -->
-      <div class="form-group row">
       </div>
-      <!-- /.form -->
-      <div id="resetSpan">
-        <img src="images/reset.svg" class="icon"><a href="/">Reset</a>
-      </div>
-      <div class="container">
-        <h1 class="mt-4">Texto a Voz </h1>
-        <p>Esto es un ejemplo de como usar el servicio de <strong >TextToSpeech de IBM </strong> en un servicio.</p>
-        <div class="row mb-3">
-            <div class="col-md-8 themed-grid-col">
-                <form id="formTextToSpeech">
-                    <div class="form-group">
-                      <label for="formLabelVoces">Voz</label>
-                      <select class="form-control" id="formSelectVoces" name="voice"></select>
-                    </div>
-                    <input id="formHiddenAccept" name="accept" type="hidden" value="audio/mp3">
-                    <div class="form-group">
-                      <label for="formLabelTexto">Texto a Convertir</label>
-                      <fieldset>
-                        <div style="display:none" class="form-group row">
-                          <div class="col-lg-12">
-                            <div class="tab-content">
-                              <div role="tabpanel" class="tab-pane active" id="home2">
-                                <textarea class="form-control" id="formTextareaTexto" name="text" rows="3"></textarea>
-                              </div>
-                              <div style="display:none" role="tabpanel" class="tab-pane" id="profile2">
-                                <textarea disabled="disabled">Example of JSON</textarea>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- .col-lg-12 -->
-                        </div>
-                        <!-- .form -->
-                      </fieldset>
-                    </div>
-                    <div class="form-group ">
-                        <div class="col-sm-10">
-                          <button type="submit" class="btn btn-primary">Sintetizar</button>
-                        </div>
-                    </div>
-
-                  </form>
-            </div>
-            <div class="col-md-4 themed-grid-col">
-                <div class="media">
-                    <audio controls id="playerTextVoz" type="audio/mpeg">
-                    </audio>
-                  </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <!-- /.row -->
-    <!-- Second column of inputs -->
-    <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-6">
+      <!-- Second column of inputs -->
+      <div class="col-lg-4 col-md-4 col-sm-4">
         <h3>Output</h3>
         <p class="help-block">Copy output from this field to clipboard.</p>
         <div class="row">
@@ -275,8 +170,8 @@
               <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a href="#home2" aria-controls="home" role="tab"
                     data-toggle="tab">Text</a></li>
-                <li role="presentation"><a href="#profile2" aria-controls="profile" role="tab"
-                    data-toggle="tab">JSON</a></li>
+                <!--<li role="presentation"><a href="#profile2" aria-controls="profile" role="tab"
+                    data-toggle="tab">JSON</a></li>-->
               </ul>
               <div class="hr-tab"></div>
               <fieldset>
@@ -299,11 +194,69 @@
         </div>
         <!-- /.well -->
       </div>
-      <!-- /.tabpanel -->
+      </div>
+      <!-- Third column of inputs -->
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <h3>Texto a Voz</h3>
+        <p class="help-block">Esto es un ejemplo de como usar el servicio de <strong >TextToSpeech de IBM </strong> en un servicio.</p>
+        <form id="formTextToSpeech">
+          <div class="form-group">
+            <label for="formLabelVoces">Voz</label>
+            <select class="form-control" id="formSelectVoces" name="voice"></select>
+          </div>
+          <input id="formHiddenAccept" name="accept" type="hidden" value="audio/mp3">
+          <div class="form-group">
+            <label for="formLabelTexto">Texto a Convertir</label>
+            <fieldset>
+              <div style="display:none" class="form-group row">
+                <div class="col-lg-12">
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home2">
+                      <textarea class="form-control" id="formTextareaTexto" name="text" rows="3"></textarea>
+                    </div>
+                    <div style="display:none" role="tabpanel" class="tab-pane" id="profile2">
+                      <textarea disabled="disabled">Example of JSON</textarea>
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-lg-12 -->
+              </div>
+              <!-- .form -->
+            </fieldset>
+          </div>
+          <div class="form-group ">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">Sintetizar</button>
+              </div>
+          </div>
+
+        </form>
+        <div class="col-md-12 themed-grid-col">
+          <div class="media">
+              <audio controls id="playerTextVoz" type="audio/mpeg">
+              </audio>
+            </div>
+      </div>
+      <div class="col-md-12 themed-grid-col">
+        <div id="resetSpan">
+          <img src="images/reset.svg" class="icon"><a href="/">Reset</a>
+        </div>
     </div>
-    <!-- /.col-lg-6 -->
+      </div>
+    </div>
+      <!-- /.tabpanel -->
+      <div class="form-group row">
+      </div>
+      <!-- /.form -->
   </div>
-  <!-- /.row -->
+  <div class="col-lg-12 col-md-12 col-sm-12 themed-grid-col">
+    <h6>
+      By using this application, you agree to the&nbsp;
+      <a target="_blank" rel="noreferrer noopener"
+        href="https://watson-developer-cloud.github.io/terms?name=Language%20Translator%20Demo">
+        Terms of Use
+      </a>
+    </h6>
   </div>
   <!-- /.container -->
   <!-- Place js files at the end of the document -->
@@ -315,7 +268,7 @@
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="demo.js"></script>
   <script type="text/javascript"
-    src="https://cdn.rawgit.com/watson-developer-cloud/watson-developer-cloud.github.io/master/analytics.js" />
+    src="https://cdn.rawgit.com/watson-developer-cloud/watson-developer-cloud.github.io/master/analytics.js"></script>
    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
