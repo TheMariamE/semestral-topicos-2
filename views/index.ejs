@@ -71,7 +71,7 @@
     </div>
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
-        <h2>Translate Text</h2>
+        <h1 class="ibm-title">Conversor de traducción escrita a voz</h1>
       </div>
     </div>
     <!-- Three columns of inputs -->
@@ -79,14 +79,13 @@
       <!-- .col-lg-12 -->
     <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-4">
-        <h3>Input</h3>
-        <p class="help-block">Enter or paste text from a passage.</p>
+        <h3>Ingrese un parrafo</h3>
         <div class="form-group row">
-          <div class="col-lg-12">
+          <div class="col-lg-12 input-output">
             <div class="dropdown">
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuInput"
                 data-toggle="dropdown" aria-expanded="true">
-                Choose Language
+                Seleccione el idioma
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="ulSourceLang">
@@ -147,14 +146,13 @@
       </div>
       <!-- Second column of inputs -->
       <div class="col-lg-4 col-md-4 col-sm-4">
-        <h3>Output</h3>
-        <p class="help-block">Copy output from this field to clipboard.</p>
+        <h3>Respuesta de Traducción</h3>
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-lg-12 input-output">
             <div class="dropdown">
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuOutput"
                 data-toggle="dropdown" aria-expanded="true">
-                Choose Language
+                Seleccione el idioma
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="ulTargetLang">
@@ -197,9 +195,8 @@
       </div>
       <!-- Third column of inputs -->
       <div class="col-lg-4 col-md-4 col-sm-4">
-        <h3>Texto a Voz</h3>
-        <p class="help-block">Esto es un ejemplo de como usar el servicio de <strong >TextToSpeech de IBM </strong> en un servicio.</p>
-        <form id="formTextToSpeech">
+        <h3>Traducción a Voz</h3>
+        <p class="help-block" style="text-align: justify;margin-bottom: 0px;">Cuando se muestre el resultado al insertar la oración o parrafo que desee traducir, seleccione el idioma de la voz de la respuesta.</p>        <form id="formTextToSpeech">
           <div class="form-group">
             <label for="formLabelVoces">Voz</label>
             <select class="form-control" id="formSelectVoces" name="voice"></select>
@@ -225,8 +222,8 @@
             </fieldset>
           </div>
           <div class="form-group ">
-              <div class="col-sm-10">
-                <button type="submit" class="btn btn-primary">Sintetizar</button>
+              <div class="col-sm-12 input-output">
+                <button type="submit" class="btn btn-primary sintetizar">Sintetizar</button>
               </div>
           </div>
 
@@ -239,7 +236,7 @@
       </div>
       <div class="col-md-12 themed-grid-col">
         <div id="resetSpan">
-          <img src="images/reset.svg" class="icon"><a href="/">Reset</a>
+          <img src="images/reset.svg" class="icon"><a href="/">Reiniciar opciones</a>
         </div>
     </div>
       </div>
@@ -249,12 +246,12 @@
       </div>
       <!-- /.form -->
   </div>
-  <div class="col-lg-12 col-md-12 col-sm-12 themed-grid-col">
-    <h6>
-      By using this application, you agree to the&nbsp;
+  <div class="col-lg-12 col-md-12 col-sm-12 footer-ibm">
+    <h6 class="footer-text">
+      Al utilizar esta aplicación, acepta las&nbsp;
       <a target="_blank" rel="noreferrer noopener"
         href="https://watson-developer-cloud.github.io/terms?name=Language%20Translator%20Demo">
-        Terms of Use
+        Condiciones de uso
       </a>
     </h6>
   </div>
