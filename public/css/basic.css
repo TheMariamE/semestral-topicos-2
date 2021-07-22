@@ -17,8 +17,8 @@
 .footer-ibm {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #d461a6;
-  border: 1px solid #d461a6;
+  background-color: #000;
+  border: 1px solid #000;
   text-align: right;
   margin-top: 50px;
 }
@@ -27,7 +27,7 @@
   color: #fff;
 }
 .footer-ibm a{
-  color: #000;
+  color: #d461a6;
   text-decoration: none;
 }
 .footer-ibm a:hover{
@@ -46,4 +46,56 @@ h3 {
   height: 50px;
   line-height: 15px;
   margin-top: 10px;
+}
+#resetSpan a {
+  text-decoration: none;
+  color: #fff;
+}
+#resetSpan {
+  background: #A50062;
+}
+#resetSpan:hover {
+  background: #000;
+  border: 1px solid #000;
+  color: #A50062 !important;
+}
+body,
+.win *{
+  font-family: 'Open Sans', sans-serif;
+}
+#input-form, #output-form {
+  background-color: #A50062;
+  border: 2px solid #A50062;
+  border-radius: 7px;
+  box-shadow: 4px 3px 8px rgb(0 0 0 / 30%);
+}
+.text-subtitle {
+  margin-bottom: 10px;
+}
+#output-form .text-subtitle {
+  margin-bottom: 15px;
+}
+#home2 {
+  cursor: not-allowed;
+}
+#Sintetizar {
+  background: #000;
+  border: 1px solid #000;
+  color: #fff;
+}
+#Sintetizar:hover {
+  background: #A50062;
+  border: 1px solid #A50062;
+}
+#dropdownMenuInput, #dropdownMenuOutput {
+  border-radius: 7px;
+  padding: 10px;
+}
+#dropdownMenuInput, #dropdownMenuOutput {
+  border-radius: 7px;
+  padding: 10px;
+  margin-top: 5px;
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
 }

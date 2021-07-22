@@ -19,13 +19,17 @@
   <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
   <title>Language Translator</title>
-  <meta name="og:title" content="IBM Watson Language Translator">
+  <meta name="og:title" content="Proyecto Final de Tópicos Especiales II">
   <meta name="og:description"
-    content="The IBM Watson Language Translator service converts text input in one language into a destination language for the end user using background from domain-specific models. Translation is available among Afrikaans, Albanian, Arabic, Armenian, Azerbaijani, Bashkir, Basque, Belarusian, Bengali, Bosnian, Bulgarian, Catalan, Central Khmer, Chinese (Simplified), Chinese (Traditional), Chuvash, Croatian, Czech, Danish, Dutch, English, Esperanto, Estonian, Finnish, French, Georgian, German, Greek, Gujarati, Haitian, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Irish, Italian, Japanese, Kazakh, Kirghiz, Korean, Kurdish, Latvian, Lithuanian, Malay, Malayalam, Maltese, Mongolian, Norwegian Bokmal, Norwegian Nynorsk, Panjabi, Persian, Polish, Portuguese, Pushto, Romanian, Russian, Serbian, Slovakian, Slovenian, Somali, Spanish, Swedish, Tamil, Telugu Thai, Turkish, Ukrainian, Urdu, and Vietnamese
- (some languages may not be available for all domains).">
+    content="Servicios de Traductor de idiomas y Text-to-Speech de IBM Watson">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
   <link href="css/watson-bootstrap-style.css" rel="stylesheet">
   <link href="css/browser-compatibility.css" rel="stylesheet">
   <link href="css/basic.css" rel="stylesheet">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
 
 </head>
 
@@ -86,7 +90,7 @@
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuInput"
                 data-toggle="dropdown" aria-expanded="true">
                 Seleccione el idioma
-                <span class="caret"></span>
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
               </button>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="ulSourceLang">
               </ul>
@@ -95,18 +99,17 @@
         </div>
         <!-- .col-lg-6 -->
         <!-- Tab panes -->
-        <div class="well">
+        <div id="input-form" class="well">
           <form class="form-horizontal">
             <div role="tabpanel">
               <!-- Nav tabs -->
-              <ul class="nav nav-tabs" role="tablist">
+              <ul class="nav nav-tabs text-subtitle" role="tablist">
                 <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
-                    data-toggle="tab">Text</a></li>
+                    data-toggle="tab">Texto</a></li>
                 <!--<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Rest
                     API</a></li>-->
                 <button style="margin: 0em; padding: 0em;" class="btn btn-secondary pull-right" type="button" id="sourceTargetLangSwitch">⇄</button>
               </ul>
-              <div class="hr-tab"></div>
               <fieldset>
                 <div class="form-group row">
                   <div class="col-lg-12">
@@ -128,7 +131,7 @@
                         You have reached the character limit (10k), sign up for more at
                         <a style="pointer-events: auto;" href="https://www.ibm.com/insert-url-here">www.ibm.com/insert-url-here</a></div>
                         <textarea></textarea>
-                        <span style="position: absolute; right: 1.5em; bottom: 0.5em;" class="input-counter"></span>
+                        <span style="position: absolute;right: 1.5em;bottom: -1.2em;color: #fff;" class="input-counter"></span>
                       </div>
                       <div role="tabpanel" class="tab-pane" id="profile">
                         <textarea disabled="disabled">Example of Rest API</textarea>
@@ -153,7 +156,7 @@
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuOutput"
                 data-toggle="dropdown" aria-expanded="true">
                 Seleccione el idioma
-                <span class="caret"></span>
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
               </button>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="ulTargetLang">
               </ul>
@@ -161,17 +164,16 @@
           </div>
         </div>
         <!-- Tab panes -->
-        <div class="well">
+        <div id="output-form" class="well">
           <form class="form-horizontal">
             <div role="tabpanel">
               <!-- Nav tabs -->
-              <ul class="nav nav-tabs" role="tablist">
+              <ul class="nav nav-tabs text-subtitle" role="tablist">
                 <li role="presentation" class="active"><a href="#home2" aria-controls="home" role="tab"
-                    data-toggle="tab">Text</a></li>
+                    data-toggle="tab">Texto</a></li>
                 <!--<li role="presentation"><a href="#profile2" aria-controls="profile" role="tab"
                     data-toggle="tab">JSON</a></li>-->
               </ul>
-              <div class="hr-tab"></div>
               <fieldset>
                 <div class="form-group row">
                   <div class="col-lg-12">
@@ -196,7 +198,7 @@
       <!-- Third column of inputs -->
       <div class="col-lg-4 col-md-4 col-sm-4">
         <h3>Traducción a Voz</h3>
-        <p class="help-block" style="text-align: justify;margin-bottom: 0px;">Cuando se muestre el resultado al insertar la oración o parrafo que desee traducir, seleccione el idioma de la voz de la respuesta.</p>        <form id="formTextToSpeech">
+        <p class="help-block" style="text-align: justify;margin-bottom: 0px;font-size: 14px;">Cuando se muestre el resultado al insertar la oración o parrafo que desee traducir, seleccione el idioma de la voz de la respuesta.</p>        <form id="formTextToSpeech">
           <div class="form-group">
             <label for="formLabelVoces">Voz</label>
             <select class="form-control" id="formSelectVoces" name="voice"></select>
@@ -223,20 +225,20 @@
           </div>
           <div class="form-group ">
               <div class="col-sm-12 input-output">
-                <button type="submit" class="btn btn-primary sintetizar">Sintetizar</button>
+                <button id="Sintetizar" type="submit" class="btn btn-primary sintetizar">Sintetizar</button>
               </div>
           </div>
 
         </form>
-        <div class="col-md-12 themed-grid-col">
+        <div class="col-md-12 input-output">
           <div class="media">
               <audio controls id="playerTextVoz" type="audio/mpeg">
               </audio>
             </div>
       </div>
-      <div class="col-md-12 themed-grid-col">
-        <div id="resetSpan">
-          <img src="images/reset.svg" class="icon"><a href="/">Reiniciar opciones</a>
+      <div class="col-md-12 input-output">
+        <div id="resetSpan" class="btn btn-primary sintetizar">
+          <a href="/">Reiniciar opciones<i class="fa fa-refresh" aria-hidden="true" style="text-decoration:none;"></i></a>
         </div>
     </div>
       </div>
