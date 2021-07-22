@@ -64,6 +64,9 @@ body,
 .win *{
   font-family: 'Open Sans', sans-serif;
 }
+.navbar a{
+  font-family: 'Open Sans', sans-serif !important;
+} 
 #input-form, #output-form {
   background-color: #A50062;
   border: 2px solid #A50062;
@@ -135,4 +138,15 @@ body {
   overflow-y: scroll;
   transform: translate3d(0px, 80px, 0px) !important;
   width: 300px;
+}
+.integrante {
+  font-size: 14px;
+  font-family: 'Open Sans' !important;
+  background-color: #3f3f3f;
+  margin: 5px 35px;
+  border-radius: 12px;
+  padding-top: 15px;
+}
+.integrante:hover {
+  color: #A50062 !important;
 }
