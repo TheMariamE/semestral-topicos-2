@@ -109,7 +109,7 @@ $(document).ready(function () {
     e.preventDefault();
     sourceLangSelect = $.trim($(this).text());
     //console.log('click href ' + sourceLangSelect);
-    $('#dropdownMenuInput').html('').html(sourceLangSelect + '<span class="caret"></span>');
+    $('#dropdownMenuInput').html('').html(sourceLangSelect + '<i class="fa fa-caret-down" aria-hidden="true"></i>');
 
     // if Choose lang or detect lang is selected again then send request for lang id service
     if (sourceLangSelect.toLowerCase().indexOf('language') >= 0) {
@@ -125,7 +125,7 @@ $(document).ready(function () {
   $('#ulTargetLang').on('click', 'a', function (e) {
     e.preventDefault();
     //console.log('click href ' + $(this).text());
-    $('#dropdownMenuOutput').html('').html($(this).text() + '<span class="caret"></span>');
+    $('#dropdownMenuOutput').html('').html($(this).text() + '<i class="fa fa-caret-down" aria-hidden="true"></i>');
     getTranslation();
   });
 
@@ -136,9 +136,9 @@ $(document).ready(function () {
     var targetLang = $.trim($('#dropdownMenuOutput').text());
     var targetText = $.trim($('#home2 textarea').val());
     // switch source/target languages, use target text for source
-    $('#dropdownMenuInput').html('').html(targetLang + '<span class="caret"></span>');
+    $('#dropdownMenuInput').html('').html(targetLang + '<i class="fa fa-caret-down" aria-hidden="true"></i>');
     updateOutputDropdownMenu();
-    $('#dropdownMenuOutput').html('').html(sourceLang + '<span class="caret"></span>');
+    $('#dropdownMenuOutput').html('').html(sourceLang + '<i class="fa fa-caret-down" aria-hidden="true"></i>');
     
     $('#home textarea').val(targetText);
     // trigger re-translation/recount
@@ -160,8 +160,8 @@ $(document).ready(function () {
       $('#profile2 textarea').val('');
 
       if ((sourceLangSelect.toLowerCase() === 'detect language') || (sourceLangSelect.toLowerCase() === 'choose language')) {
-        $('#dropdownMenuInput').html('Seleccione el idioma <span class="caret"></span>');
-        $('#dropdownMenuOutput').html('Seleccione el idioma <span class="caret"></span>');
+        $('#dropdownMenuInput').html('Seleccione el idioma <i class="fa fa-caret-down" aria-hidden="true"></i>');
+        $('#dropdownMenuOutput').html('Seleccione el idioma <i class="fa fa-caret-down" aria-hidden="true"></i>');
       }
     }
     clearTimeout(typingTimer);
@@ -190,8 +190,8 @@ $(document).ready(function () {
   // Reset all the values on page
   $('#resetSpan').click(function (e) {
     e.preventDefault();
-    $('#dropdownMenuInput').html('Seleccione el idioma <span class="caret"></span>');
-    $('#dropdownMenuOutput').html('Seleccione el idioma <span class="caret"></span>');
+    $('#dropdownMenuInput').html('Seleccione el idioma <i class="fa fa-caret-down" aria-hidden="true"></i>');
+    $('#dropdownMenuOutput').html('Seleccione el idioma <i class="fa fa-caret-down" aria-hidden="true"></i>');
     $('#home textarea').val('');
     $('#home2 textarea').val('');
     $('#profile textarea').val('');
@@ -251,10 +251,10 @@ $(document).ready(function () {
           if (langIdentified) {
             //console.log('lang identified');
             // If souce lang is same as identified land then add in dropdown Input menu
-            $('#dropdownMenuInput').html('').html(dataLangName + ' <span class="caret"></span>');
+            $('#dropdownMenuInput').html('').html(dataLangName + ' <i class="fa fa-caret-down" aria-hidden="true"></i>');
           } else {
             //console.log('lang not identified');
-            $('#dropdownMenuInput').html('').html(dataLangName + ': not supported for this domain <span class="caret"></span>');
+            $('#dropdownMenuInput').html('').html(dataLangName + ': not supported for this domain <i class="fa fa-caret-down" aria-hidden="true"></i>');
           }
           // update outputDropDown only when the detected source changed
           if (oldSrcLang != $('#dropdownMenuInput').html())
@@ -338,7 +338,7 @@ $(document).ready(function () {
   function updateOutputDropdownMenu() {
     var exists;
     $('#ulTargetLang').html('');
-    $('#dropdownMenuOutput').html('').html('Seleccione el idioma <span class="caret"></span>');
+    $('#dropdownMenuOutput').html('').html('Seleccione el idioma <i class="fa fa-caret-down" aria-hidden="true"></i>');
 
     // Update output dropdown menu with target language
     $.each(sourceList, function (index, value) {
@@ -362,7 +362,7 @@ $(document).ready(function () {
     });
 
     if ($('#ulTargetLang li').length == 1) {
-      $('#dropdownMenuOutput').html('').html($($('#ulTargetLang a')).text() + '<span class="caret"></span>');
+      $('#dropdownMenuOutput').html('').html($($('#ulTargetLang a')).text() + '<i class="fa fa-caret-down" aria-hidden="true"></i>');
     }
   }
 
